@@ -13,7 +13,7 @@ namespace Cloud5mins.domain
         private const string ConversionCode = "FjTG0s5dgWkbLf_8etOZqMzNhmp7u6lUJoXIDiQB9-wRxCKyrPcv4En3Y21aASHV";
         private static readonly int Base = ConversionCode.Length;
         //sets the length of the unique code to add to vanity
-        private const int MinVanityCodeLength = 5;
+        private const int MinVanityCodeLength = 7;
 
         public static async Task<string> GetValidEndUrl(string vanity, StorageTableHelper stgHelper)
         {
@@ -82,15 +82,7 @@ namespace Cloud5mins.domain
                 return new UnauthorizedResult();
             }
 
-            if (principal.FindFirst(ClaimTypes.GivenName) is null)
-            {
-                log.LogError("Claim not Found");
-                return new BadRequestObjectResult(new
-                {
-                    message = "Claim not Found",
-                    StatusCode = System.Net.HttpStatusCode.BadRequest
-                });
-            }
+
             return null;
         }
     }
