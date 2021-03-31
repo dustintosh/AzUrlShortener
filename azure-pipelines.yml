@@ -1,15 +1,5 @@
 # Starter pipeline
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Visual Studio Enterprise Subscription(9c272827-fed3-4b36-91f5-2065b7872b37)'
-    subscriptionId: '9c272827-fed3-4b36-91f5-2065b7872b37'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'User_NPU7996'
-    location: 'East US 2'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://github.com/hcadpx/az-dpx-xus-infrastructure/blob/master/xus_deploy_2.json'
-    deploymentMode: 'Incremental'
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -25,3 +15,15 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Visual Studio Enterprise Subscription(9c272827-fed3-4b36-91f5-2065b7872b37)'
+    subscriptionId: '9c272827-fed3-4b36-91f5-2065b7872b37'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'User_NPU7996'
+    location: 'East US 2'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/hcadpx/az-dpx-xus-infrastructure/blob/master/xus_deploy_2.json'
+    deploymentMode: 'Incremental'
