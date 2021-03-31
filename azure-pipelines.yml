@@ -8,7 +8,14 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Management Group'
+    azureResourceManagerConnection: 'Visual Studio Enterprise Subscription(9c272827-fed3-4b36-91f5-2065b7872b37)'
+    location: 'East US 2'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/hcadpx/az-dpx-xus-infrastructure/blob/master/xus_deploy_2.json'
+    deploymentMode: 'Incremental'
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
