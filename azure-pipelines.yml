@@ -25,5 +25,5 @@ steps:
     resourceGroupName: 'User_NPU7996'
     location: 'East US 2'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/hcadpx/az-dpx-xus-infrastructure/current/xus_deploy_2.json?token=ADKWGDBN7U32GFGZLCFMYUTAN5LC2'
+    csmFileLink: 'https://raw.githubusercontent.com/hcadpx/az-dpx-xus-infrastructure/current/xus_deploy_2.json?token=ADKWGDB374NOEKIFE5AXMNLAOBLH2'
     deploymentMode: 'Incremental'
